@@ -10,16 +10,33 @@ import org.junit.Test;
 //	int GOOGLE = 1, APPLE = 2, ORACLE = 3;
 //}
 
-class Fruit{
+/*class Fruit{
 	public static final Fruit APPLE = new Fruit(); 
 	public static final Fruit PEACH = new Fruit();
 	public static final Fruit BANANA = new Fruit();
 	
+}*/
+enum Fruit{
+	APPLE("red"), PEACH("pink"), BANANA("yellow");
+	private String color;
+	public String getColor() {
+		return this.color;
+	}
+	
+	Fruit(String color){
+//		System.out.println("Call Constructor " + this);
+		this.color = color;
+	}
 }
-class Company{
-	public static final Company GOOGLE = new Company(); 
-	public static final Company APPLE = new Company();
-	public static final Company ORACLE = new Company();
+/*
+ * class Company{ 
+ * public static final Company GOOGLE = new Company(); 
+ * public static final Company APPLE = new Company(); 
+ * public static final Company ORACLE = new Company(); 
+ * }
+ */
+enum Company{
+	GOOGLE, APPLE, ORACLE;
 }
 
 public class ConstantDemo {
@@ -34,21 +51,25 @@ public class ConstantDemo {
 	@Test
 	public void test() {
 		
-		if(FRUIT.APPLE == COMPANY.GOOGLE) {
-			System.out.println("과일애플과 기업애플은 같습니다.");
-		}
+//		if(Fruit.APPLE == Company.GOOGLE) {
+//			System.out.println("과일애플과 기업애플은 같습니다.");
+//		}
 		
-		int type = FRUIT.APPLE;
-		switch(type) {
-			case FRUIT.APPLE:
-				System.out.println(57);
-				break;
-			case FRUIT.PEACH:
-				System.out.println(34);
-				break;
-			case FRUIT.BANANA:
-				System.out.println(93);
-				break;
+//		Fruit type = Fruit.APPLE;
+//		switch(type) {
+//			case APPLE:
+//				System.out.println(57+" kcal, color " + Fruit.APPLE.getColor());
+//				break;
+//			case PEACH:
+//				System.out.println(34+" kcal, color " + Fruit.PEACH.getColor());
+//				break;
+//			case BANANA:
+//				System.out.println(93+" kcal, color " + Fruit.BANANA.getColor());
+//				break;
+//		}
+		
+		for(Fruit f : Fruit.values()) {
+			System.out.println(f);
 		}
 	
 		
