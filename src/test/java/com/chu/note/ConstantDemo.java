@@ -2,27 +2,39 @@ package com.chu.note;
 
 import org.junit.Test;
 
-public class ConstantDemo {
-	private final static int FRUIT_APPLE = 1;
-	private final static int FRUIT_PEACH = 2;
-	private final static int FRUIT_BANANA = 3;
+interface FRUIT{
+	int APPLE = 1, PEACH = 2, BANANA = 3;
 	
-	private final static int COMPANY_GOOGLE = 1;
-	private final static int COMPANY_APPLE = 2;
-	private final static int COMPANY_ORACLE = 3;
+}
+interface COMPANY{
+	int GOOGLE = 1, APPLE = 2, ORACLE = 3;
+}
+
+public class ConstantDemo {
+//	public final static int FRUIT_APPLE = 1;
+//	public final static int FRUIT_PEACH = 2;
+//	public final static int FRUIT_BANANA = 3;
+//	
+//	public final static int COMPANY_GOOGLE = 1;
+//	public final static int COMPANY_APPLE = 2;
+//	public final static int COMPANY_ORACLE = 3;
 
 	@Test
 	public void test() {
 		
-		int type = FRUIT_APPLE;
+		if(FRUIT.APPLE == COMPANY.GOOGLE) {
+			System.out.println("과일애플과 기업애플은 같습니다.");
+		}
+		
+		int type = FRUIT.APPLE;
 		switch(type) {
-			case FRUIT_APPLE:
+			case FRUIT.APPLE:
 				System.out.println(57);
 				break;
-			case FRUIT_PEACH:
+			case FRUIT.PEACH:
 				System.out.println(34);
 				break;
-			case FRUIT_BANANA:
+			case FRUIT.BANANA:
 				System.out.println(93);
 				break;
 		}
