@@ -2,12 +2,24 @@ package com.chu.note;
 
 import org.junit.Test;
 
-interface FRUIT{
-	int APPLE = 1, PEACH = 2, BANANA = 3;
+//interface FRUIT{
+//	int APPLE = 1, PEACH = 2, BANANA = 3;
+//	
+//}
+//interface COMPANY{
+//	int GOOGLE = 1, APPLE = 2, ORACLE = 3;
+//}
+
+class Fruit{
+	public static final Fruit APPLE = new Fruit(); 
+	public static final Fruit PEACH = new Fruit();
+	public static final Fruit BANANA = new Fruit();
 	
 }
-interface COMPANY{
-	int GOOGLE = 1, APPLE = 2, ORACLE = 3;
+class Company{
+	public static final Company GOOGLE = new Company(); 
+	public static final Company APPLE = new Company();
+	public static final Company ORACLE = new Company();
 }
 
 public class ConstantDemo {
