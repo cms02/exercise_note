@@ -5,6 +5,13 @@ public class testVo {
 	private String id;
 	private String name;
 	private int age;
+	
+	
+	
+	public testVo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public testVo(String id, String name, int age) {
 		super();
 		this.id = id;
