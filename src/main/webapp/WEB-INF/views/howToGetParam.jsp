@@ -22,7 +22,7 @@ $.ajax({
 	type : "POST",
 	url  : "htgpRequestBody",
 	data : JSON.stringify(data),
-	contentType : "application/json",
+	contentType : "application/json;charset=UTF-8",
 	success 	: function(data) {
     },
     error		: function(error) {
