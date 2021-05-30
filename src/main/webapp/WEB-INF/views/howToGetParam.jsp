@@ -6,11 +6,14 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<script type="text/javascript">
+
+</script>
 <body>
 <h1>Controller 에서 Parameter 어떻게 받을까?</h1>
 
-<h2>FORM START</h2>
-	<form action="htgParam">
+<h2>@RequestBody</h2>
+	<form action="htgpRequestBody" method="POST">
 		<div>
 		<label>ID: </label>
 		<input type="text" name="id" /> 
@@ -23,8 +26,10 @@
 		<label>AGE: </label>
 		<input type="text" name="age" />
 		</div>
+		
+		<input type="submit" value="gogo">
 	</form>
-<h2>FORM END</h2>
+<h2>@RequestBody</h2>
 
 
 
