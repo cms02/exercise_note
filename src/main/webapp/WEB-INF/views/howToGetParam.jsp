@@ -6,13 +6,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-	crossorigin="anonymous"></script>
+<script src="./resources/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 function reqtest(){
-	
-data ={
+	 event.preventDefault();
+var info ={
 		"id" : $("#id").val(),
 		"name" : $("#name").val(),
 		"age" : $("#age").val()
@@ -20,8 +18,10 @@ data ={
 
 $.ajax({
 	type : "POST",
-	url  : "htgpRequestBody",
-	data : JSON.stringify(data),
+	url  : "testRequestBody",
+	async : true,
+	data : JSON.stringify(info),
+	dataType:"json",
 	contentType : "application/json;charset=UTF-8",
 	success 	: function(data) {
     },
@@ -35,7 +35,6 @@ $.ajax({
 <h1>Controller 에서 Parameter 어떻게 받을까?</h1>
 
 <h2>@RequestBody</h2>
-	<!-- <form action="" method="POST"> -->
 		<div>
 		<label>ID: </label>
 		<input type="text" name="id" id="id"/> 
@@ -49,8 +48,7 @@ $.ajax({
 		<input type="text" name="age" id="age"/>
 		</div>
 		
-		<input type="button" value="gogo" onclick="reqtest()">
-	<!-- </form> -->
+		<input type="button" value="gogo" onclick="reqtest()"/>
 <h2>@RequestBody</h2>
 
 
