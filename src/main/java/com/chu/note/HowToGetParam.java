@@ -1,9 +1,13 @@
 package com.chu.note;
 
+import java.util.HashMap;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.chu.note.vo.testVo;
 
@@ -16,7 +20,7 @@ public class HowToGetParam {
 	}
 	
 
-	@RequestMapping(value="/testRequestBody", method = {RequestMethod.POST,RequestMethod.GET})
+	@RequestMapping(value="/testRequestBody")
 	public String htgpRequestBody(@RequestBody testVo testVo) {
 		
 		System.out.println(testVo.getId());
@@ -27,5 +31,16 @@ public class HowToGetParam {
 		
 	}
 	
+	@RequestMapping(value="/testRequestParam")
+	public String htgpRequestParam(@RequestParam HashMap<String, String> paramMap) {
+		
+//		System.out.println(testVo.getId());
+//		System.out.println(testVo.getName());
+//		System.out.println(testVo.getAge());
+		System.out.println(paramMap.get("id"));
+		
+		return "home";
+		
+	}
 
 }
