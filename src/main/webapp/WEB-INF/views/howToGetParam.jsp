@@ -38,7 +38,6 @@ function reqparamtest(){
 			"age" : $("#age2").val()
 	};
 	
-	console.log(info2);
 
 	$.ajax({
 		type : "POST",
@@ -76,9 +75,9 @@ function reqparamtest(){
 		
 <h2>@RequestParam</h2>
 
+<form action="testRequestParam">
 <label>ID2: </label>
 		<input type="text" name="id" id="id2"/> 
-		</div>
 		<div>
 		<label>NAME2: </label>
 		<input type="text" name="name" id="name2" />
@@ -88,9 +87,9 @@ function reqparamtest(){
 		<input type="text" name="age" id="age2"/>
 		</div>
 		
-		<input type="button" value="gogoparam" onclick="reqparamtest()"/>
+		<input type="submit" value="gogoparam" />
 
-
+</form>
 
 
 

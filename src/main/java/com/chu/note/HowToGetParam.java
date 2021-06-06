@@ -31,14 +31,30 @@ public class HowToGetParam {
 		
 	}
 	
-	@RequestMapping(value="/testRequestParam")
-	public String htgpRequestParam(@RequestParam HashMap<String, String> paramMap) {
+	/*
+	 * @RequestMapping(value="/testRequestParam") public String
+	 * htgpRequestParam(@RequestBody HashMap<String, String> paramMap) {
+	 * 
+	 * // System.out.println(testVo.getId()); //
+	 * System.out.println(testVo.getName()); // System.out.println(testVo.getAge());
+	 * System.out.println(paramMap.get("id"));
+	 * System.out.println(paramMap.get("name"));
+	 * System.out.println(paramMap.get("age"));
+	 * 
+	 * return "home";
+	 * 
+	 * }
+	 */
+	
+	
+	
+	@RequestMapping(value="/testRequestParam", method = {RequestMethod.POST, RequestMethod.GET})
+	public String htgpRequestParam(@RequestParam("id") String id) {
 		
 //		System.out.println(testVo.getId());
 //		System.out.println(testVo.getName());
 //		System.out.println(testVo.getAge());
-		System.out.println(paramMap.get("id"));
-		
+		System.out.println(id);
 		return "home";
 		
 	}
