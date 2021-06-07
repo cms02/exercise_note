@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,74 +8,71 @@
 </head>
 <script src="./resources/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
-function reqbodytest(){
-var info ={
-		"id" : $("#id").val(),
-		"name" : $("#name").val(),
-		"age" : $("#age").val()
-};
+	function reqbodytest() {
+		var info = {
+			"id" : $("#id").val(),
+			"name" : $("#name").val(),
+			"age" : $("#age").val()
+		};
 
-$.ajax({
-	type : "POST",
-	url  : "testRequestBody",
-	async : true,
-	data : JSON.stringify(info),
-	dataType:"json",
-	contentType : "application/json;charset=UTF-8",
-	success 	: function(data) {
-    },
-    error		: function(error) {
-    	console.log(error);
-    }
-});
-}
+		$.ajax({
+			type : "POST",
+			url : "testRequestBody",
+			async : true,
+			data : JSON.stringify(info),
+			dataType : "json",
+			contentType : "application/json;charset=UTF-8",
+			success : function(data) {
+				alert(data.home);
+			},
+			error : function(error) {
+				console.log(error);
+			}
+		});
+	}
 
-
-function reqparamtest(){
-	var info2 ={
+	function reqparamtest() {
+		var info2 = {
 			"id" : $("#id2").val(),
 			"name" : $("#name2").val(),
 			"age" : $("#age2").val()
-	};
-	
+		};
 
-	$.ajax({
-		type : "POST",
-		url  : "testRequestParam",
-		async : true,
-		data : JSON.stringify(info2),
-		dataType:"json",
-		contentType : "application/json;charset=UTF-8",
-		success 	: function(data) {
-	    },
-	    error		: function(error) {
-	    	console.log(error);
-	    }
-	});
+		$.ajax({
+			type : "POST",
+			url : "testRequestParam",
+			async : true,
+			data : JSON.stringify(info2),
+			dataType : "json",
+			contentType : "application/json;charset=UTF-8",
+			success : function(data) {
+				alert("성공");
+			},
+			error : function(error) {
+				console.log(error);
+			}
+		});
 	}
 </script>
 <body>
-<h1>Controller 에서 Parameter 어떻게 받을까?</h1>
+	<h1>Controller 에서 Parameter 어떻게 받을까?</h1>
 
-<h2>@RequestBody</h2>
-		<div>
-		<label>ID: </label>
-		<input type="text" name="id" id="id"/> 
-		</div>
-		<div>
-		<label>NAME: </label>
-		<input type="text" name="name" id="name" />
-		</div>
-		<div>
-		<label>AGE: </label>
-		<input type="text" name="age" id="age"/>
-		</div>
-		
-		<input type="button" value="gogobody" onclick="reqbodytest()"/>
-		
-<h2>@RequestParam</h2>
+	<h2>@RequestBody</h2>
+	<div>
+		<label>ID: </label> <input type="text" name="id" id="id" />
+	</div>
+	<div>
+		<label>NAME: </label> <input type="text" name="name" id="name" />
+	</div>
+	<div>
+		<label>AGE: </label> <input type="text" name="age" id="age" />
+	</div>
 
-<form action="testRequestParam">
+	<input type="button" value="gogobody" onclick="reqbodytest()" />
+
+	<h2>@RequestParam</h2>
+
+<!-- 	 <form action="testRequestParam">
 <label>ID2: </label>
 		<input type="text" name="id" id="id2"/> 
 		<div>
@@ -89,7 +86,18 @@ function reqparamtest(){
 		
 		<input type="submit" value="gogoparam" />
 
-</form>
+</form>  -->
+
+	<label>ID2: </label>
+	<input type="text" name="id" id="id2" />
+	<div>
+		<label>NAME2: </label> <input type="text" name="name" id="name2" />
+	</div>
+	<div>
+		<label>AGE2: </label> <input type="text" name="age" id="age2" />
+	</div>
+
+	<input type="button" value="gogoparam" onclick="reqparamtest()" />
 
 
 
