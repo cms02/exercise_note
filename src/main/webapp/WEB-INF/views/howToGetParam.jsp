@@ -40,7 +40,7 @@
 
 		$.ajax({
 			type : "POST",
-			url : "testRequestParam",
+			url : "testRequestParam?id=gg&name=ggggg&age=14",
 			async : true,
 			data : JSON.stringify(info2),
 			dataType : "json",
