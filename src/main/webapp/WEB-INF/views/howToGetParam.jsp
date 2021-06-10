@@ -8,7 +8,7 @@
 </head>
 <script src="./resources/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
-	function reqbodytest() {
+	function requestBodyTest() {
 		var info = {
 			"id" : $("#id").val(),
 			"name" : $("#name").val(),
@@ -31,7 +31,7 @@
 		});
 	}
 
-	function reqparamtest() {
+	function reqestParamTest() {
 		var info2 = {
 			"id" : $("#id2").val(),
 			"name" : $("#name2").val(),
@@ -68,7 +68,7 @@
 		<label>AGE: </label> <input type="text" name="age" id="age" />
 	</div>
 
-	<input type="button" value="gogobody" onclick="reqbodytest()" />
+	<input type="button" value="goRequestBody" onclick="requestBodyTest()" />
 
 	<h2>@RequestParam</h2>
 
@@ -97,7 +97,7 @@
 		<label>AGE2: </label> <input type="text" name="age" id="age2" />
 	</div>
 
-	<input type="button" value="gogoparam" onclick="reqparamtest()" />
+	<input type="button" value="goRequestParam" onclick="reqestParamTest()" />
 
 
 
