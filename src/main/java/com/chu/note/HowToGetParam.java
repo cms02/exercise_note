@@ -20,10 +20,10 @@ public class HowToGetParam {
 	@RequestMapping(value = "/testRequestBody")
 	public String htgpRequestBody(@RequestBody testVo testVo) {
 
-		System.out.println(testVo.getId());
-		System.out.println(testVo.getName());
-		System.out.println(testVo.getAge());
-
+//		System.out.println(testVo.getId());
+//		System.out.println(testVo.getName());
+//		System.out.println(testVo.getAge());*/
+		System.out.println("gg"+testVo);
 		return "home";
 
 	}

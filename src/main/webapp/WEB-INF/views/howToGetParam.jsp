@@ -58,7 +58,7 @@
 	<h1>Controller 에서 Parameter 어떻게 받을까?</h1>
 
 	<h2>@RequestBody</h2>
-	<div>
+<!-- 	<div>
 		<label>ID: </label> <input type="text" name="id" id="id" />
 	</div>
 	<div>
@@ -68,7 +68,19 @@
 		<label>AGE: </label> <input type="text" name="age" id="age" />
 	</div>
 
-	<input type="button" value="goRequestBody" onclick="requestBodyTest()" />
+	<input type="button" value="goRequestBody" onclick="requestBodyTest()" /> -->
+	
+	<form action="testRequestBody">
+	<label>ID: </label> <input type="text" name="id" id="id" />
+	<label>NAME: </label> <input type="text" name="name" id="name" />
+	<label>AGE: </label> <input type="text" name="age" id="age" />
+	<input type="submit" value="formSubmit"/>
+	</form>
+
+
+
+
+
 
 	<h2>@RequestParam</h2>
 
