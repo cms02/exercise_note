@@ -3,6 +3,7 @@ package com.chu.note;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,12 +19,12 @@ public class HowToGetParam {
 	}
 
 	@RequestMapping(value = "/testRequestBody")
-	public String htgpRequestBody(@RequestBody testVo testVo) {
+	public String testRequestBody(testVo testVo) {
 
 //		System.out.println(testVo.getId());
 //		System.out.println(testVo.getName());
 //		System.out.println(testVo.getAge());*/
-		System.out.println("gg"+testVo);
+		System.out.println(testVo);
 		return "home";
 
 	}
